@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Buy Products : Aling Nena </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/css/admin.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Aling Nena</a>
+          <a class="navbar-brand" href="/products">Products</a>
+          <a class="navbar-brand" href="/about">About Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="admin">
+        <form method="POST" action="/buy_product/<%= params[:id]%>">
+          <h3>
+          <label for="product">Product: </label>
+          <label for="item"><%= @products.name %></label>
+          <br />
+          <label for="cost">Cost:</label>
+          <label for="amount"><%= @products.price %></label>
+          <br />
+          <label for="cost">In Stock:</label>
+          <label for="amount"><%= @products.quantity %></label>
+          <br />
+          <label for="quantity">Quantity: </label>
+          <input type="text" name="quantity" value="0">
+          <br />
+          <label for="thousands">P 1000: </label>
+          <input type="text" name="thousands" value="0">
+          <br />
+          <label for="five_hundreds">P 500:</label>
+          <input type="text" name="five_hundreds" value="0">
+          <br />
+          <label for="hundreds">P 100:</label>
+          <input type="text" name="hundreds" value="0">
+          <br />
+          <label for="fifties">P 50:</label>
+          <input type="text" name="fifties" value="0">
+          <br />
+          <label for="twenties">P 20:</label>
+          <input type="text" name="twenties" value="0">
+          <br />
+          <label for="tens">P 10:</label>
+          <input type="text" name="tens" value="0">
+          <br />
+          <label for="fives">P 5:</label>
+          <input type="text" name="fives" value="0">
+          <br />
+          <label for="ones">P 1:</label>
+          <input type="text" name="ones" value="0">
+          <br />
+          <button class="btn btn-default">Buy</button>
+        </h3>
+        </form>
+      </div>
+
+    </div><!-- /.container -->
+    <!-- Bootstrap core JavaScript -->
+    <!-- ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

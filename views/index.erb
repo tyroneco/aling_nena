@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>All Products : Aling Nena </title>
+    <title>Home: Aling Nena </title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -33,11 +33,12 @@
         </div>
       </div>
     </div>
-
+    <center>
+    <img src="images/banner.jpg" />
+    </center>
     <div class="container">
-
       <div class="admin">
-        <h1>All Products</h1>
+        <h1>Popular Products!</h1>        
         <table class="table table-striped">
           <thead>
             <tr>
@@ -45,27 +46,27 @@
               <td>Name</td>
               <td>Price</td>
               <td>Quantity</td>
-              <td>Sold</td>
             </tr>
           </thead>
           <tbody>
-          <% @products.each do |product| %>
+          <% @random_products.each do |product| %>
             <tr>
               <td><%= product.id %></td>
               <td><%= product.name %></td>
               <td><%= product.price %></td>
               <td><%= product.quantity %></td>
-              <td><%= product.sold %></td>
-              <td><a href="/edit_product/<%= product.id %>" class="btn btn-default btn-primary">Edit</a></td>
-              <td><a href="/delete_product/<%= product.id %>" class="btn btn-default btn-danger">Delete</a></td>
+              <td><a href="/buy_product/<%= product.id %>" class="btn btn-default btn-primary">Buy</a></td>
             </tr>
-			<% end %>          
-			</tbody>          
+          <% end %>          
+          </tbody>          
         </table>
-        <a href="/new_product" class="btn btn-default">Create New Product</a>
-      </div>
+        <a href="/products" class="btn btn-default">Show All Products</a>
+      <div>
+    </div>
 
-    </div><!-- /.container -->
+
+
+    <!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
