@@ -8,6 +8,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="/css/admin.css" rel="stylesheet">
+    <link href="MyStyle.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,7 +36,7 @@
       </div>
       <div>
         <h2><b>Congratulations! The transaction was a success!</b></h2>
-        <h3><b>You bought <%= params[:quantity] %> piece of <%= @products.name %>!</b></h3>
+        <h3><b>You bought <%= params[:quantity] %> piece(s) of <%= @products.name %>!</b></h3>
         <h3><b>Your total change is <%= @calc.total_change %>!</b></h3>
           <h4><label for="thousands">P 1000: <%= @calc.change_thousands.to_i %></label>
           <br />
@@ -52,7 +53,9 @@
           <label for="fives">P 5: <%= @calc.change_fives.to_i %></label>
           <br />
           <label for="ones">P 1: <%= @calc.change_ones.to_i %></label>
-          <br /></h4>
+          <br />
+          <a href="/products" class="btn btn-default btn-primary">Buy More Products!</a>
+          </h4>
           <!-- <label><%= @calc.change(@amount_due, @calc.total) %></label> -->
       </div>
 

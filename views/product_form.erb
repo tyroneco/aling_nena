@@ -12,8 +12,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-
     <link href="/css/admin.css" rel="stylesheet">
+    <link href="MyStyle2.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,7 +35,6 @@
     </div>
 
     <div class="container">
-
       <div class="admin">
         <h1><%= @product.new_record? ? "Create New Product" : "Update #{@product.name}" %></h1>
         <form role="form" method="POST" action="<%= @product.new_record? ? '/create_product' : "/update_product/#{@product.id}" %>">
@@ -64,10 +63,8 @@
                 <a href="/admin" class="btn btn-default">Back to Product List</a>
               </div>
             </div>
-          </form>
-
+        </form>
       </div>
-
     </div><!-- /.container -->
 
 

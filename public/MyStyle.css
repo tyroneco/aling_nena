@@ -1,0 +1,19 @@
+body,.container, .navbar, .navbar-brand, .admin{
+	background-color: #CCCC66;
+	color: black;
+	font-family: Helvetica;
+
+}
+
+img{
+	height: 300px;
+	width: 1200px;
+}
+
+a {
+	color: black;
+}
+
+div{
+	text-align: center;
+}
